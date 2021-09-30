@@ -1,0 +1,43 @@
+# 注意，两个register api在服务器运行周期内针对不同实例仅应该调用一次。
+/register-master:
+  description: Master向computing center注册自己的服务器地址。
+  post:
+    params:
+    header:
+      authorization: Bearer # Only Master
+    body:
+      url: # str
+    success:
+      msg: ok
+    error:
+      msg: <ERROR MESSAGE>
+
+/register:
+  description: client主动向computing center注册自己的服务器地址，用于动态添加client实例，并将client纳入到多方计算中。
+  post:
+    params:
+    header:
+      authorization: Bearer # Authorized Client
+    body:
+      tag: # str
+      url: # str
+    success:
+      msg: ok
+    error:
+      msg: <ERROR MESSAGE>
+
+
+
+/computing-request:
+  description: 进行一次计算。此api开放，调用之后所有的client都会获取到最新的summary
+  post:
+    header:
+    params:
+    body:
+      filters:
+        description: 过滤条件
+    success:
+      msg: ok
+    error:
+      msg: <ERROR MESSAGE>
+

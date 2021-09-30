@@ -1,0 +1,25 @@
+/data:
+  get:
+    description: client使用自己密钥加密过后的信息，发送给computing center。
+    params:
+      filters:
+        description: 过滤条件
+      N: # Base64
+      k: # Base64
+      g: # Base64
+    success:
+      msg: ok
+      A: # Base64
+      B: # Base64
+      pk: # Base64
+    error:
+      msg: <ERROR MESSAGE>
+  post:
+    description: computing center完成了计算，将结果发回client
+    body:
+      W:
+      Z:
+    success:
+      msg: ok
+    error:
+      msg: <ERROR MESSAGE>
