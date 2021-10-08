@@ -4,14 +4,14 @@
     params:
       filters:
         description: 过滤条件
-      N: # Base64
-      k: # Base64
-      g: # Base64
+      N: # HEX
+      k: # HEX
+      g: # HEX
     success:
       msg: ok
-      A: # Base64
-      B: # Base64
-      pk: # Base64
+      A: # HEX
+      B: # HEX
+      pk: # HEX
     error:
       msg: <ERROR MESSAGE>
   post:

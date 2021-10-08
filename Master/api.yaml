@@ -3,9 +3,9 @@
   get:
     params:
     success:
-      N:
-      k:
-      g:
+      N: # HEX
+      k: # HEX
+      g: # HEX
       msg: ok
     error:
       msg: <ERROR MESSAGE>
@@ -31,8 +31,8 @@
   post:
     body:
       data:
-        C:
-        D:
+        C: # HEX
+        D: # HEX
       success:
         msg: ok
         data:
