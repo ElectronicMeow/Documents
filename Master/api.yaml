@@ -6,9 +6,9 @@
       N: # HEX
       k: # HEX
       g: # HEX
-      msg: ok
+      message: ok
     error:
-      msg: <ERROR MESSAGE>
+      message: <ERROR MESSAGE>
 
 
 /transform-to-same-pk:
@@ -16,27 +16,27 @@
   post:
     body:
       data:
-        - [tag, C, D, pk]
+        - [tag, encrypted_pair_a, encrypted_pair_b, public_key]
         - ...
     success:
-      msg: ok
+      message: ok
       data:
-        - [tag, W, Z]
+        - [tag, encrypted_pair_a, encrypted_pair_b]
         - ...
     error:
-      msg: <ERROR MESSAGE>
+      message: <ERROR MESSAGE>
 
 /tranform-back:
   description: 把计算过后的单个结果密文对转换成所有client公钥加密的格式，然后返回给computing center，由computing center负责分发回去。
   post:
     body:
       data:
-        C: # HEX
-        D: # HEX
+        encrypted_pair_a: # HEX
+        encrypted_pair_b: # HEX
       success:
-        msg: ok
+        message: ok
         data:
-          - [tag, W, Z]
+          - [tag, encrypted_pair_a, encrypted_pair_b]
           - ...
       error:
-        msg: <ERROR MESSAGE>
+        message: <ERROR MESSAGE>

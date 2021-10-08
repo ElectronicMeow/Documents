@@ -8,18 +8,18 @@
       k: # HEX
       g: # HEX
     success:
-      msg: ok
-      A: # HEX
-      B: # HEX
-      pk: # HEX
+      message: ok
+      encrypted_pair_a: # HEX
+      encrypted_pair_b: # HEX
+      public_key: # HEX
     error:
-      msg: <ERROR MESSAGE>
+      message: <ERROR MESSAGE>
   post:
     description: computing center完成了计算，将结果发回client
     body:
-      W:
-      Z:
+      encrypted_pair_a: # HEX
+      encrypted_pair_b: # HEX
     success:
-      msg: ok
+      message: ok
     error:
-      msg: <ERROR MESSAGE>
+      message: <ERROR MESSAGE>

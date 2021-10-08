@@ -8,9 +8,9 @@
     body:
       url: # str
     success:
-      msg: ok
+      message: ok
     error:
-      msg: <ERROR MESSAGE>
+      message: <ERROR MESSAGE>
 
 /register:
   description: client主动向computing center注册自己的服务器地址，用于动态添加client实例，并将client纳入到多方计算中。
@@ -22,9 +22,9 @@
       tag: # str
       url: # str
     success:
-      msg: ok
+      message: ok
     error:
-      msg: <ERROR MESSAGE>
+      message: <ERROR MESSAGE>
 
 
 
@@ -37,7 +37,7 @@
       filters:
         description: 过滤条件
     success:
-      msg: ok
+      message: ok
     error:
-      msg: <ERROR MESSAGE>
+      message: <ERROR MESSAGE>
 
