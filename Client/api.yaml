@@ -1,7 +1,7 @@
-/data:
-  get:
+/data-request:
+  post:
     description: client使用自己密钥加密过后的信息，发送给computing center。
-    params:
+    data:
       filters:
         description: 过滤条件
       N: # HEX
@@ -14,6 +14,8 @@
       public_key: # HEX
     error:
       message: <ERROR MESSAGE>
+
+/set-result:
   post:
     description: computing center完成了计算，将结果发回client
     body:
